@@ -6,7 +6,9 @@ import 'login.dart';
 import 'welcomescreen.dart';
 import 'registerpage.dart';
 
-void main() => runApp(MyApp());
+
+void main() {
+  runApp(MyApp());}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Chatscreen.id: (context) => Chatscreen(),
         HomePage.id : (context) => HomePage(),
-        Maps.id : (context) => Maps(),
+        MapsDemo.id : (context) => MapsDemo(),
         LoginPage.id : (context) => LoginPage(),
         RegisterPage.id :(context) => RegisterPage(),
         WelcomeScreen.id : (context) => WelcomeScreen(),

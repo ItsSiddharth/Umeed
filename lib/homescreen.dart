@@ -242,7 +242,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     FlatButton(
                       onPressed: (){
-                        Navigator.pushNamed(context, Maps.id);
+                        Navigator.pushNamed(context, MapsDemo.id);
                       },
                         color: Colors.white,
                       child: Icon(

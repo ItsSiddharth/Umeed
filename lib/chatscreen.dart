@@ -40,49 +40,50 @@ class _ChatscreenState extends State<Chatscreen> {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Color(0xFFFFC2C2),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.grey,
+                    ),
+                    Image(image: AssetImage('images/Ellipse 12.png'), width: 50, height: 50,),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text('Dr XYZ', style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.grey,
+                        ),),
+                        Text('+91 XXX-XXX-XXXX', style: TextStyle(
+                          fontSize: 10,
+                          color: Colors.grey,
+                        ),),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 90,
+                    ),
+                    Icon(
+                      Icons.account_circle, size: 50,
+                      color: Colors.grey,
+                    ) ,
+                  ],
+                ),
+            ],
+          ),
+        ),
         body: Padding(
           padding: const EdgeInsets.only(top: 30.0),
           child: Column(
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Container(
-                    height: 75,
-                    color: Colors.white,
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.arrow_back_ios,
-                          color: Colors.grey,
-                        ),
-                        Image(image: AssetImage('images/Ellipse 12.png'), width: 50, height: 50,),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text('Dr XYZ', style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.grey,
-                            ),),
-                            Text('+91 XXX-XXX-XXXX', style: TextStyle(
-                              fontSize: 10,
-                              color: Colors.grey,
-                            ),),
-                          ],
-                        ),
-                       SizedBox(
-                         width: 120,
-                       ),
-                       Icon(
-                         Icons.account_circle, size: 50,
-                       ) ,
-                      ],
-                    ),
-                  )
-                ],
-              ),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

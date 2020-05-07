@@ -1,14 +1,42 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Maps extends StatefulWidget {
-  static const String id = 'mapscreen';
+class MapsDemo extends StatefulWidget {
+  static const String id = 'MapsDemo';
+  MapsDemo() : super();
+
+  final String title = "Maps Demo";
+
   @override
-  _MapsState createState() => _MapsState();
+  MapsDemoState createState() => MapsDemoState();
 }
 
-class _MapsState extends State<Maps> {
+class MapsDemoState extends State<MapsDemo> {
+  Completer<GoogleMapController> _controller = Completer();
+
+  static const LatLng _center = const LatLng(45.521563, -122.677433);
+
+  void _onMapCreated(GoogleMapController controller) {
+    _controller.complete(controller);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Maps Sample App'),
+          backgroundColor: Colors.green[700],
+        ),
+        body: GoogleMap(
+          onMapCreated: _onMapCreated,
+          initialCameraPosition: CameraPosition(
+            target: _center,
+            zoom: 11.0,
+          ),
+        ),
+      ),
+    );
   }
 }
