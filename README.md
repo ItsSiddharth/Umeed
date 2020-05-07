@@ -1,4 +1,5 @@
-<<<<<<< HEAD
-=======
+# Umeed
 
->>>>>>> 2dd93efeff8bcb869787b7545c75490fd1ec7525
+## Demo 
+
+<img src="./assets/demo.gif" width="538" title="demo">
